@@ -1,0 +1,9 @@
+spring:
+  rabbit:
+    host: localhost
+    port: 5672
+    username: "{cipher}efefb45a3719d5b1310c9ac14e1311c7104748bf673499d8fa1626602051f7d0"
+    password: "{cipher}3d068086623ad1bb554b941c27d03ccfb6e2391235e3806f853ebb532f6cb6c8"
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/app1

@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: app1
+          uri: lb://app1
+          predicates:
+            - Path=/app1/**
+          filters:
+            - RewritePath=/app1/(?<segment>.*), /$\{segment}
+        - id: app2
+          uri: lb://app2
+          predicates:
+            - Path=/app2/**
+          filters:
+            - RewritePath=/app2/(?<segment>.*), /$\{segment}
+            

@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: app2
+  profiles:
+    active: local
+  config:
+    import: 'optional:configserver:'
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        fail-fast: true
+        service-id: config
+
+server:
+  port: 20000
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+grpc:
+  server:
+    port: 0
+
+encrypt:
+  key: mySecretKey
